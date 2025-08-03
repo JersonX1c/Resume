@@ -1,0 +1,220 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Resume</title>
+  <link rel="stylesheet" href="style.css" />
+  <style>
+    @keyframes fadeIn {
+      from { opacity: 0; }
+      to { opacity: 1; }
+    }
+
+    @keyframes fadeInUp {
+      from { opacity: 0; transform: translateY(20px); }
+      to { opacity: 1; transform: translateY(0); }
+    }
+
+    @keyframes fadeInDown {
+      from { opacity: 0; transform: translateY(-20px); }
+      to { opacity: 1; transform: translateY(0); }
+    }
+
+    .fade-in {
+      animation: fadeIn 1s ease forwards;
+    }
+
+    .fade-up {
+      animation: fadeInUp 1s ease forwards;
+    }
+
+    .fade-down {
+      animation: fadeInDown 1s ease forwards;
+    }
+
+    .skill-card, .social-links a {
+      transition: transform 0.3s, box-shadow 0.3s;
+    }
+
+    .skill-card:hover, .social-links a:hover {
+      transform: translateY(-5px);
+      box-shadow: 0 8px 20px rgba(0, 255, 255, 0.3);
+    }
+  </style>
+</head>
+
+<body>
+  <div class="container">
+
+    <!-- Sidebar -->
+    <div class="sidebar">
+      <div class="profile-pic">
+        <img src="photo.jpg" alt="My Photo" />
+      </div>
+      <p class="profile-text">Yo I'm Jerson, an Information Technology student</p>
+    </div>
+
+    <!-- Main Content -->
+    <div class="main">
+      <!-- Navigation -->
+      <nav class="nav-menu">
+        <ul>
+          <li><a href="#" data-section="home">Home</a></li>
+          <li><a href="#" data-section="about-me">About Me</a></li>
+          <li><a href="#" data-section="education">Education</a></li>
+          <li><a href="#" data-section="skills">Skills</a></li>
+          <li><a href="#" data-section="projects">Projects</a></li>
+          <li><a href="#" data-section="contact">Contact</a></li>
+        </ul>
+      </nav>
+
+      <!-- HOME -->
+      <section id="home" class="section active">
+        <div class="home-hero">
+          <div class="home-text">
+            <h1>Welcome to my Resume</h1>
+            <p class="fade-in" style="font-size: 18px;">Hello, It's Me</p>
+            <h1 class="fade-down" style="font-size: 36px; color: white;">Jerson Tagulao</h1>
+            <p class="fade-up" style="font-size: 22px; font-weight: bold; color: #ff0000;">And I'm an IT Student</p>
+            <p class="fade-in" style="margin-top: 15px;">
+              Passionate about tech and web development. I also enjoy reading about Biology and Nephrology.
+            </p>
+            <div style="margin-top: 20px; display: flex; gap: 15px;" class="fade-up">
+              <a href="https://facebook.com/JersonTagulao" target="_blank">
+                <img src="icon/facebook.png" alt="Facebook" width="30" />
+              </a>
+              <a href="https://instagram.com/jerxswtf_" target="_blank">
+                <img src="icon/instagram.png" alt="Instagram" width="30" />
+              </a>
+            </div>
+            <a href="#contact" class="download-btn" style="margin-top: 25px;">
+              "No one is better than me, And I am better than no one"
+            </a>
+          </div>
+          <div class="home-image"></div>
+        </div>
+      </section>
+
+      <!-- ABOUT -->
+      <section id="about-me" class="section">
+        <h2>About Me</h2>
+        <div class="about-wrapper">
+          <div class="about-image">
+            <img src="photo.jpg" alt="Jerson" />
+          </div>
+          <div class="about-details fade-in">
+            <p>Hello! I'm Jerson Tagulao, 20 years old. I live in Bamban, Tarlac,
+              and I am currently studying at Dominican College of Tarlac,
+              taking up a Bachelor of Science in Information Technology.
+              I enjoy reading books about Biology and Nephrology.
+              My sport is basketball, and I’m also passionate about cars.</p>
+            <div class="car-gallery">
+              <img src="car1.jpg" alt="Car 1" />
+              <img src="car2.jpg" alt="Car 2" />
+              <img src="car3.jpg" alt="Car 3" />
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- EDUCATION -->
+      <section id="education" class="section">
+    <h2 class="fade-in">Education</h2>
+    <div class="education-card fade-up">
+    <h3>Dominican College of Tarlac</h3>
+    <p><strong>Course:</strong> Bachelor of Science in Information Technology</p>
+    <p><strong>Year:</strong> 3rd Year (2022 - Present)</p>
+    <p><strong>Location:</strong> Capas, Tarlac</p>
+  </div>
+</section>
+
+
+      <!-- SKILLS -->
+      <section id="skills" class="section">
+        <h2 class="fade-in">Skills</h2>
+        <div class="skills-grid fade-up">
+          <div class="skill-card"><img src="icons/html.png" alt="HTML"><p>HTML</p></div>
+          <div class="skill-card"><img src="icons/css.png" alt="CSS"><p>CSS</p></div>
+          <div class="skill-card"><img src="icons/js.png" alt="JavaScript"><p>JavaScript</p></div>
+          <div class="skill-card"><img src="icons/network.png" alt="Networking"><p>Networking</p></div>
+          <div class="skill-card"><img src="icons/cplus.png" alt="C++"><p>C++</p></div>
+          <div class="skill-card"><img src="icons/java.png" alt="Java"><p>Java</p></div>
+        </div>
+      </section>
+
+      <!-- PROJECTS -->
+      <section id="projects" class="section">
+        <h2>My Projects</h2>
+        <div class="projects-grid">
+          <div class="project-card">
+            <h3>Diary App</h3>
+            <p>A mobile diary app built with Flutter to log daily moods and notes.</p>
+          </div>
+          <div class="project-card">
+            <h3>Portfolio Website</h3>
+            <p>This responsive website showcases my resume, skills, and projects.</p>
+          </div>
+          <div class="project-card">
+            <h3>Student Info System</h3>
+            <p>A web app that manages student records using HTML, CSS, and JavaScript.</p>
+          </div>
+        </div>
+      </section>
+
+      <!-- CONTACT -->
+      <section id="contact" class="section">
+        <h2 class="fade-in">Contact</h2>
+        <div class="social-links fade-up">
+          <a href="https://facebook.com/JersonTagulao" target="_blank">
+            <img src="icon/facebook.png" alt="Facebook">
+            <span>Jerson Tagulao</span>
+          </a>
+          <a href="https://instagram.com/jerxswtf_" target="_blank">
+            <img src="icon/instagram.png" alt="Instagram">
+            <span>jerxswtf_</span>       
+          </a>
+        </div>
+        <input type="text" placeholder="Input Text Here!" />
+        <button type="button">Submit</button>
+      </section>
+
+    </div>
+  </div>
+
+  <!-- Script -->
+  <script>
+    const sidebar = document.querySelector('.sidebar');
+    const links = document.querySelectorAll('.nav-menu a');
+    const sections = document.querySelectorAll('.section');
+
+    links.forEach(link => {
+      link.addEventListener('click', (e) => {
+        e.preventDefault();
+        const target = link.getAttribute('data-section');
+
+        sections.forEach(sec => {
+          sec.classList.remove('active');
+          if (sec.id === target) {
+            sec.classList.add('active');
+          }
+        });
+
+        sidebar.style.display = (target === 'about-me') ? 'none' : 'flex';
+      });
+    });
+
+    // Submit function
+    function handleSubmit() {
+      const input = document.querySelector('#contact input').value.trim();
+      if (input) {
+        alert(`Thanks for your message: "${input}"`);
+      } else {
+        alert("Please enter a message before submitting.");
+      }
+    }
+
+    document.querySelector('#contact button').addEventListener('click', handleSubmit);
+  </script>
+</body>
+</html>
